@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="https://adminvps.ru/oops/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+    <link rel="shortcut icon" href="logo4.ico" type="image/x-icon">   
+    <link rel="stylesheet" href="Калькулятор.css"> 
+    <title>Калькулятор</title>
+</head>
+
+<body>
+    <div class="window_color">
+        <div class="empty_block"></div>
+        <div class="header">
+            <!--<div class="currency"></div>-->
+            <!--<div class="logotip"></div>-->
+                <div class="header_btn">
+                        <form action="#">
+                            <button type="submit" class="btn">Главная</button> 
+                        </form>
+                        <form action="https://www.rbc.ru/">
+                            <button type="submit" class="btn">Новости</button> 
+                        </form>
+                        <form action="/Калькулятор/Калькулятор.html">
+                            <button type="submit" class="btn">Калькулятор</button> 
+                        </form>
+                        <form action="#">
+                            <button type="submit" class="btn">Контакты</button> 
+                        </form>
+                </div>
+            <!--<div class="search_btn">-->
+            <!--    <form action="/sign/sign.html">-->
+            <!--        <button type="submit" class="sign"> <img src="men.png" height="25px">поиск</button>-->
+            <!--    </form>-->
+            <!--</div>-->
+            <div class="sign">
+                <form action="/sign/sign.html">
+                    <button type="submit" class="sign"> <img src="men.png" height="25px">Вход</button>
+                </form>
+            </div>
+            <div class="burger_btn">
+                <span></span>
+            </div>
+        </div>
+    </div>    
+
+<div class="content">
+<!--  Калькулятор -->
+    <div class="container_calc">
+        <div class="header_container_calc">
+            <p class="p_container_calc">Рассчитайте ипотеку</p>
+        </div>
+
+        <div class="calculator-content-body-left">  
+            <div class="input-wrapper">
+                <div class="title1">Введите сумму кредита</div>
+                    <div class="input">
+                        <input type="number" id="total-cost" value="0" oninput="document.getElementById('total-cost-range').value = this.value">
+                    </div>
+                    <div class="input">
+                        <input type="range" min="0" max="10000000" id="total-cost-range" value="0" class="input-range" oninput="document.getElementById('total-cost').value = this.value">
+                    </div>     
+            </div>    
+
+            <div class="input-wrapper">
+                <div class="title2">Первоначальный взнос</div>
+                    <div class="input">
+                        <input type="number" id="an-initial-fee" value="100000" oninput="document.getElementById('an-initial-fee-range').value = this.value">
+                    </div>
+                    <div class="input">
+                        <input type="range" min="100000" max="10000000" id="an-initial-fee-range" value="0" class="input-range" oninput="document.getElementById('an-initial-fee').value = this.value">
+                    </div>    
+            </div>
+
+            <div class="input-wrapper">
+                <div class="title3">Срок кредита</div>
+                    <div class="input">
+                        <input type="number" id="credit-term" value="0" oninput="document.getElementById('credit-term-range').value = this.value">
+                    </div>
+                    <div class="input">
+                        <input type="range" min="1" max="20" id="credit-term-range" value="0" class="input-range" oninput="document.getElementById('credit-term').value = this.value">
+                    </div>    
+            </div>
+
+            <div class="calculator-content-title">
+                <h2>Выбрать банк</h2>
+            </div>
+
+            <div class="left_calc_bank">
+                <div class="calculator-content-body-left-btns">
+                    <button data-name="alfa" class="bank active">
+                        <div class="text">Альфа-банк</div>
+                        <div class="value">8.7%</div>
+                    </button>
+                    <button data-name="sberbank" class="bank">
+                        <div class="text">Сбербанк</div>
+                        <div class="value">8.4%</div>
+                    </button>
+                    <button data-name="pochta" class="bank">
+                        <div class="text">Почта-банк</div>
+                        <div class="value">7.9%</div>
+                    </button>
+                    <button data-name="tinkoff" class="bank">
+                        <div class="text">Тинькофф-банк</div>
+                        <div class="value">9.2%</div>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="calculator-content-body-right">
+            <div class="final-result-wrapper">
+                <div class="final-result-item">
+                    <div class="title4">Сумма кредита</div>
+                    <div class="value4" id="amount-of-credit">0<span>P</span></div>
+                </div>
+                <div class="final-result-item">
+                    <div class="title5">Ежемесячный платеж</div>
+                    <div class="value5" id="monthly-payment">0<span>P</span></div>
+                </div>
+                <div class="final-result-item">
+                    <div class="title6">Рекомендуемый доход</div>
+                    <div class="value6" id="recommended-income">0<span>P</span></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="Калькулятор.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="buttons">
+                <button type="submit" class="AC">AC</button>
+                <button type="submit" class="plusmin">+/-</button>
+                <button type="submit" class="proc">%</button>
+                <button type="submit" class="del">/</button>
+                <button type="submit" class="x">x</button>
+                <button type="submit" class="min">-</button>
+                <button type="submit" class="plus">+</button>
+                <button type="submit" class="ravno">=</button>
+                <button type="submit" class="zap">,</button>
+                <button type="submit" class="number one">1</button>
+                <button type="submit" class="number two">2</button>
+                <button type="submit" class="number three">3</button>
+                <button type="submit" class="number four">4</button>
+                <button type="submit" class="number five">5</button>
+                <button type="submit" class="number six">6</button>
+                <button type="submit" class="number seven">7</button>
+                <button type="submit" class="number eight">8</button>
+                <button type="submit" class="number nine">9</button>
+                <button type="submit" class="number zero">0</button>
+            </div> -->
+
+
+<!-- <div>
+<span class="social_whatsapp">
+    <a href="https://web.whatsapp.com" target="_blank"><i class="fa fa-whatsapp fa-2x"></i></a>
+</span>
+<span class="social_telegram">
+    <a href="https://desktop.telegram.org" target="_blank"><i class="fa fa-paper-plane fa-2x"></i></a>
+</span>  
+<span class="social_vk">
+    <a href="https://vk.com" target="_blank"><i class="fa fa-vk fa-2x"></i></a>    
+</span>
+<span class="social_youtube">
+    <a href="https://www.youtube.com" target="_blank"><i class="fa fa-youtube fa-2x"></i></a>
+</span>   
+</div> -->
